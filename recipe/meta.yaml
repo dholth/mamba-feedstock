@@ -8,11 +8,10 @@ package:
   name: mamba-split
 
 source:
-  url: https://github.com/mamba-org/mamba/archive/refs/tags/{{ release }}.tar.gz
-  sha256: 36d617de5971ad2b4460f5446bee7622f33cf3a8a079df8f97bc24e9a5873071
+  git_url: ../../mamba
 
 build:
-  number: 2
+  number: 7
 
 outputs:
   - name: libmamba
@@ -46,6 +45,7 @@ outputs:
         - fmt
         - winreg                                 # [win]
         - zstd
+        - simdjson
       run:
         - libsolv >=0.7.23
     test:
@@ -96,6 +96,7 @@ outputs:
         - fmt
         - termcolor-cpp
         - nlohmann_json
+        - simdjson
         - {{ pin_subpackage('libmamba', exact=True) }}
       run:
         - python
