@@ -1,7 +1,7 @@
 {% set name = "mamba" %}
-{% set libmamba_version = "1.5.3" %}
-{% set libmambapy_version = "1.5.3" %}
-{% set mamba_version = "1.5.3" %}
+{% set libmamba_version = "1.5.300" %}
+{% set libmambapy_version = "1.5.300" %}
+{% set mamba_version = "1.5.300" %}
 {% set release = "2023.10.30" %}
 
 package:
@@ -11,7 +11,7 @@ source:
   git_url: ../../mamba
 
 build:
-  number: 7
+  number: 8
 
 outputs:
   - name: libmamba
