@@ -6,6 +6,7 @@
 
 package:
   name: mamba-split
+  version: "1"
 
 source:
   git_url: ../../mamba
@@ -34,7 +35,7 @@ outputs:
         - libsolv >=0.7.23
         - libcurl >=8.4.0
         - openssl
-        - libarchive
+        - {{ pin_compatible('libarchive', exact=True) }}
         - nlohmann_json
         - cpp-expected
         - reproc
